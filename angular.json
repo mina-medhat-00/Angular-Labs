@@ -24,8 +24,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "projects/portfolio/src/styles.css"
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -99,16 +98,15 @@
             "outputPath": "dist/user-list",
             "index": "projects/user-list/src/index.html",
             "browser": "projects/user-list/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/user-list/tsconfig.app.json",
             "assets": [
               "projects/user-list/src/favicon.ico",
               "projects/user-list/src/assets"
             ],
             "styles": [
-              "projects/user-list/src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -157,18 +155,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/user-list/tsconfig.spec.json",
             "assets": [
               "projects/user-list/src/favicon.ico",
               "projects/user-list/src/assets"
             ],
-            "styles": [
-              "projects/user-list/src/styles.css"
-            ],
+            "styles": ["projects/user-list/src/styles.css"],
             "scripts": []
           }
         }

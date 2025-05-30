@@ -1,3 +1,30 @@
-{
-    
-}
+[
+  {
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png",
+    "username": "john_doe",
+    "email": "johndoe@example.com",
+    "phone": "+1234567890",
+    "verified": true
+  },
+  {
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png",
+    "username": "alice_smith",
+    "email": "alicesmith@gmail.com",
+    "phone": "+1987654321",
+    "verified": false
+  },
+  {
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png",
+    "username": "mike89",
+    "email": "mike89@yahoo.com",
+    "phone": "+1122334455",
+    "verified": true
+  },
+  {
+    "avatar": "https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png",
+    "username": "sarah_smith",
+    "email": "sarah.smith@zoho.com",
+    "phone": "+1098765432",
+    "verified": false
+  }
+]

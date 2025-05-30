@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule, UserCardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styles: ``,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'user-list';
+
+  users: any[] = [];
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
+    this.http.get<any[]>('assets/data/users.json').subscribe((data) => {
+      this.users = data;
+    });
+  }
 }
