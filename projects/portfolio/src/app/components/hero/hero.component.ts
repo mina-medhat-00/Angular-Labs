@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
       <p class="lead">Web Developer</p>
     </div>
   </section> `,
+  styles: ``,
 })
 export class HeroComponent {}

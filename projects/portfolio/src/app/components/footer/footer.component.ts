@@ -28,5 +28,6 @@ import { Component } from '@angular/core';
       <p class="mt-4 small">&copy; 2025 Mina Medhat. All rights reserved.</p>
     </div>
   </footer> `,
+  styles: ``,
 })
 export class FooterComponent {}

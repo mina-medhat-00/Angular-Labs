@@ -22,6 +22,7 @@ import { AboutComponent } from './components/about/about.component';
     <app-projects></app-projects>
     <app-footer></app-footer>
   </main> `,
+  styles: ``,
 })
 export class AppComponent {
   title = 'portfolio';

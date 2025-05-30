@@ -32,5 +32,6 @@ import { Component } from '@angular/core';
       </div>
     </div>
   </section>`,
+  styles: ``,
 })
 export class AboutComponent {}
