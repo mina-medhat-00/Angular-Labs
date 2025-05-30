@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './components/hero/hero.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -10,7 +9,6 @@ import { AboutComponent } from './components/about/about.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     HeroComponent,
     FooterComponent,
     ProjectsComponent,
