@@ -4,9 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-hero',
   standalone: true,
   imports: [],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  template: `<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Mina Medhat</h1>
+      <p class="lead">Web Developer</p>
+    </div>
+  </section> `,
 })
-export class HeroComponent {
-
-}
+export class HeroComponent {}
