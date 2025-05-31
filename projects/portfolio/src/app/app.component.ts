@@ -25,5 +25,4 @@ import { AboutComponent } from './components/about/about.component';
   styles: ``,
 })
 export class AppComponent {
-  title = 'portfolio';
 }

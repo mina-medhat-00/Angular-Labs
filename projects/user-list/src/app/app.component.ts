@@ -11,8 +11,6 @@ import { UserCardComponent } from './components/user-card/user-card.component';
   styles: ``,
 })
 export class AppComponent implements OnInit {
-  title = 'user-list';
-
   users: any[] = [];
   constructor(private http: HttpClient) {}
   ngOnInit(): void {

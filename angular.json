@@ -79,7 +79,7 @@
               "projects/portfolio/src/favicon.ico",
               "projects/portfolio/src/assets"
             ],
-            "styles": ["projects/portfolio/src/styles.css"],
+            "styles": [],
             "scripts": []
           }
         }
@@ -161,7 +161,7 @@
               "projects/user-list/src/favicon.ico",
               "projects/user-list/src/assets"
             ],
-            "styles": ["projects/user-list/src/styles.css"],
+            "styles": [],
             "scripts": []
           }
         }
