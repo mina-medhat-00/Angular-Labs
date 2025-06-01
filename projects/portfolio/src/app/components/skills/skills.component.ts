@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-skills',
+  selector: "app-skills",
   standalone: true,
   imports: [],
   template: `<section class="py-5" id="skills">

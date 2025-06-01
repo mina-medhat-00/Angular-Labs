@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-about',
+  selector: "app-about",
   standalone: true,
   imports: [],
   template: `<section class="py-5 bg-light" id="about">

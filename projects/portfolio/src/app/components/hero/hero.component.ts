@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-hero',
+  selector: "app-hero",
   standalone: true,
   imports: [],
   template: `<section class="bg-primary text-white text-center py-5">
