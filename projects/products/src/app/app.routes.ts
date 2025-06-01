@@ -1,28 +1,28 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { CartComponent } from './components/cart/cart.component';
+import { Routes } from "@angular/router";
+import { HomeComponent } from "./components/home/home.component";
+import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { CartComponent } from "./components/cart/cart.component";
 
 export const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
-    title: 'Home Page',
+    title: "Home Page",
   },
   {
-    path: 'login',
+    path: "login",
     component: LoginComponent,
-    title: 'Login Page',
+    title: "Login Page",
   },
   {
-    path: 'register',
+    path: "register",
     component: RegisterComponent,
-    title: 'Register Page',
+    title: "Register Page",
   },
   {
-    path: 'cart',
+    path: "cart",
     component: CartComponent,
-    title: 'Cart Page',
+    title: "Cart Page",
   },
 ];
