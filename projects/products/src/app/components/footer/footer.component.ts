@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-footer',
+  selector: "app-footer",
   standalone: true,
   imports: [],
-  templateUrl: './footer.component.html',
-  styles: ``
+  templateUrl: "./footer.component.html",
+  styles: ``,
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}
