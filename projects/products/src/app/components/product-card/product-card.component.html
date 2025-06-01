@@ -1,1 +1,24 @@
-<p>product-card works!</p>
+<div class="card h-100" style="width: 18rem">
+  <div
+    *ngIf="product.stock != 0"
+    class="position-absolute bg-success text-white p-2 m-2 rounded-pill"
+  >
+    In Stock
+  </div>
+  <div
+    *ngIf="product.stock == 0"
+    class="position-absolute bg-danger text-white p-2 m-2 rounded-pill"
+  >
+    Out of Stock
+  </div>
+  <img
+    [src]="product.imageURL"
+    class="card-img-top img-thumbnail"
+    alt="Product Image"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <button class="btn btn-success rounded-pill">Add to Cart</button>
+  </div>
+</div>
