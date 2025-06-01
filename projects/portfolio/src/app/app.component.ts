@@ -10,19 +10,18 @@ import { AboutComponent } from './components/about/about.component';
   standalone: true,
   imports: [
     HeroComponent,
-    FooterComponent,
-    ProjectsComponent,
-    SkillsComponent,
     AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    FooterComponent,
   ],
   template: `<main>
-    <app-hero></app-hero>
-    <app-about></app-about>
-    <app-skills></app-skills>
-    <app-projects></app-projects>
-    <app-footer></app-footer>
+    <app-hero />
+    <app-about />
+    <app-skills />
+    <app-projects />
+    <app-footer />
   </main> `,
   styles: ``,
 })
-export class AppComponent {
-}
+export class AppComponent {}

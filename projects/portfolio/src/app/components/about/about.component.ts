@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
       </ul>
 
       <div class="mt-4 text-center">
-        <a href="#" download class="btn btn-primary">
+        <a href="#" class="btn btn-primary" download>
           <i class="fas fa-download me-2"></i> Download CV
         </a>
       </div>
