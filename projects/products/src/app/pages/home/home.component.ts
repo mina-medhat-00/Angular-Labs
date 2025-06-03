@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { Product } from "../../types/types";
 import { ProductCardComponent } from "../../components/product-card/product-card.component";
 
 @Component({
@@ -11,11 +12,13 @@ import { ProductCardComponent } from "../../components/product-card/product-card
   styles: ``,
 })
 export class HomeComponent {
-  products: any[] = [];
+  products: Product[] = [];
+
   constructor(private http: HttpClient) {}
-  ngOnInit(): void {
-    this.http.get<any[]>("assets/data/products.json").subscribe((data) => {
-      this.products = data;
+
+  ngOnInit() {
+    this.http.get("https://dummyjson.com/products").subscribe((data: any) => {
+      this.products = data.products;
     });
   }
 }

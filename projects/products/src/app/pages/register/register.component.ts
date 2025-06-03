@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
-import { RegisterUser } from "../../types/forms";
+import { RegisterUser } from "../../types/types";
 
 @Component({
   selector: "register",
