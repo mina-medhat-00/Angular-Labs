@@ -1,10 +1,26 @@
 import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule, NgForm } from "@angular/forms";
+import { LoginUser } from "../../types/forms";
 
 @Component({
-  selector: "app-login",
+  selector: "login",
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: "./login.component.html",
-  styles: ``,
+  styles: `
+  .form-control{
+    outline: #000;
+  }
+  .form-control:focus {
+    box-shadow:none;
+    border:1px solid #000
+  }`,
 })
-export class LoginComponent {}
+export class LoginComponent {
+  user: LoginUser = {
+    email: "",
+    password: "",
+  };
+  handleForm(form: NgForm) {}
+}

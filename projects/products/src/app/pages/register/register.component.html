@@ -1,1 +1,118 @@
-<p>register works!</p>
+<div class="container">
+  <form #registerForm="ngForm" (ngSubmit)="handleForm(registerForm)">
+    <div class="mb-3">
+      <label for="firstName" class="form-label"
+        >First Name <span class="text-danger">*</span></label
+      >
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        class="form-control"
+        [(ngModel)]="user.firstName"
+        #firstName="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="firstName.invalid && firstName.touched"
+        class="form-text text-danger"
+      >
+        First Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label"
+        >Last Name <span class="text-danger">*</span></label
+      >
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        class="form-control"
+        [(ngModel)]="user.lastName"
+        #lastName="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="lastName.invalid && lastName.touched"
+        class="form-text text-danger"
+      >
+        Last Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label"
+        >Email <span class="text-danger">*</span></label
+      >
+      <input
+        type="email"
+        name="registerEmail"
+        id="registerEmail"
+        class="form-control"
+        [(ngModel)]="user.email"
+        #registerEmail="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="registerEmail.invalid && registerEmail.touched"
+        class="form-text text-danger"
+      >
+        Email is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="registerPassword" class="form-label"
+        >Password <span class="text-danger">*</span></label
+      >
+      <input
+        type="password"
+        name="registerPassword"
+        id="registerPassword"
+        class="form-control"
+        [(ngModel)]="user.password"
+        #registerPassword="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="registerPassword.invalid && registerPassword.touched"
+        class="form-text text-danger"
+      >
+        Password is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="registerConfirmPassword" class="form-label"
+        >Confirm Password <span class="text-danger">*</span></label
+      >
+      <input
+        type="password"
+        name="registerConfirmPassword"
+        id="registerConfirmPassword"
+        class="form-control"
+        [(ngModel)]="user.confirmPassword"
+        #registerConfirmPassword="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="
+          registerConfirmPassword.invalid && registerConfirmPassword.touched
+        "
+        class="form-text text-danger"
+      >
+        Password Confirmation is required.
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="registerForm.invalid"
+    >
+      Register with email
+    </button>
+  </form>
+</div>

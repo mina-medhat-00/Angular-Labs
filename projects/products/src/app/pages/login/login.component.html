@@ -1,1 +1,49 @@
-<p>login works!</p>
+<div class="container">
+  <form #loginForm="ngForm" (ngSubmit)="handleForm(loginForm)">
+    <div class="mb-3">
+      <label for="loginEmail" class="form-label"
+        >Email <span class="text-danger">*</span></label
+      >
+      <input
+        type="email"
+        name="loginEmail"
+        id="loginEmail"
+        class="form-control"
+        [(ngModel)]="user.email"
+        #loginEmail="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="loginEmail.invalid && loginEmail.touched"
+        class="form-text text-danger"
+      >
+        Email is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="loginPassword" class="form-label"
+        >Password <span class="text-danger">*</span></label
+      >
+      <input
+        type="password"
+        name="loginPassword"
+        id="loginPassword"
+        class="form-control"
+        [(ngModel)]="user.password"
+        #loginPassword="ngModel"
+        autocomplete="off"
+        required
+      />
+      <div
+        *ngIf="loginPassword.invalid && loginPassword.touched"
+        class="form-text text-danger"
+      >
+        Password is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-dark" [disabled]="loginForm.invalid">
+      Continue with email
+    </button>
+  </form>
+</div>
