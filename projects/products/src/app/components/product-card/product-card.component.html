@@ -1,21 +1,17 @@
-<div class="card h-100" style="width: 18rem">
+<div class="card h-100">
   <div
     *ngIf="product.stock != 0"
-    class="position-absolute bg-success text-white p-2 m-2 rounded-pill"
+    class="position-absolute bg-success text-white px-2 m-2 rounded-pill fs-6"
   >
     In Stock
   </div>
   <div
     *ngIf="product.stock == 0"
-    class="position-absolute bg-danger text-white p-2 m-2 rounded-pill"
+    class="position-absolute bg-danger text-white px-2 m-2 rounded-pill fs-6"
   >
     Out of Stock
   </div>
-  <img
-    [src]="product.imageURL"
-    class="card-img-top img-thumbnail"
-    alt="Product Image"
-  />
+  <img [src]="product.imageURL" class="card-img-top" alt="Product Image" />
   <div class="card-body">
     <h5 class="card-title">{{ product.name }}</h5>
     <p class="card-text">{{ product.description }}</p>

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { RouterModule, RouterOutlet } from "@angular/router";
+import { RouterOutlet, RouterModule } from "@angular/router";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 
@@ -9,7 +9,9 @@ import { FooterComponent } from "./components/footer/footer.component";
   imports: [RouterOutlet, RouterModule, NavbarComponent, FooterComponent],
   template: `
     <app-navbar />
-    <router-outlet />
+    <main style="min-height: 100vh;">
+      <router-outlet />
+    </main>
     <app-footer />
   `,
   styles: ``,
