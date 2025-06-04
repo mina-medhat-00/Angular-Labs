@@ -5,7 +5,10 @@
       *ngFor="let product of products"
       class="col-sm-6 col-md-4 col-lg-3 mb-4"
     >
-      <product-card [product]="product"></product-card>
+      <product-card
+        [product]="product"
+        (addToCart)="handleAddToCart($event)"
+      ></product-card>
     </div>
   </div>
 </div>

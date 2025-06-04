@@ -1,5 +1,6 @@
-import { Component, input, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { ProductsService } from "../../services/products.service";
 import { Product } from "../../types/types";
 
 @Component({
@@ -11,4 +12,15 @@ import { Product } from "../../types/types";
 })
 export class ProductCardComponent {
   @Input() product!: Product;
+  @Output() addToCart = new EventEmitter<Product>();
+
+  constructor(private productsService: ProductsService) {}
+
+  handleClick() {
+    this.productsService
+      .getProductById(this.product.id)
+      .subscribe((response) => {
+        this.productsService.addToCart(response);
+      });
+  }
 }

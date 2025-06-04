@@ -20,9 +20,10 @@
   />
 
   <div class="card-body d-flex flex-column">
-    <h5 class="card-title text-truncate" title="{{ product.title }}">
+    <h5 class="card-title text-truncate">
       {{ product.title }}
     </h5>
+
     <p class="card-text text-muted small" style="min-height: 60px">
       {{ product.description | slice : 0 : 100 }}...
     </p>
@@ -32,6 +33,7 @@
       <button
         class="btn btn-outline-success btn-sm rounded-pill"
         [disabled]="product.stock === 0"
+        (click)="handleClick()"
       >
         Add to Cart
       </button>

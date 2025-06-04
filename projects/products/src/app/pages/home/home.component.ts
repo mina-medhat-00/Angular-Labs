@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { HttpClientModule, HttpClient } from "@angular/common/http";
-import { Product } from "../../types/types";
+import { HttpClientModule } from "@angular/common/http";
+import { ProductsService } from "../../services/products.service";
 import { ProductCardComponent } from "../../components/product-card/product-card.component";
+import { Product } from "../../types/types";
 
 @Component({
   selector: "app-home",
@@ -14,11 +15,15 @@ import { ProductCardComponent } from "../../components/product-card/product-card
 export class HomeComponent {
   products: Product[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit() {
-    this.http.get("https://dummyjson.com/products").subscribe((data: any) => {
-      this.products = data.products;
+    this.productsService.getProducts().subscribe((response: any) => {
+      this.products = response.products;
     });
+  }
+
+  handleAddToCart(product: Product) {
+    this.productsService.addToCart(product);
   }
 }

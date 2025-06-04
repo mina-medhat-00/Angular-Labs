@@ -1,1 +1,36 @@
-<p>cart works!</p>
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Cart Items</h2>
+  <div *ngIf="cart.length > 0; else emptyCart">
+    <div class="list-group">
+      <div
+        class="list-group-item d-flex flex-column flex-md-row align-items-md-center overflow-hidden"
+        *ngFor="let item of cart"
+      >
+        <div class="mb-3 mb-md-0 me-md-3 text-center">
+          <img
+            [src]="item.thumbnail"
+            alt="{{ item.title }}"
+            class="img-thumbnail"
+            style="width: 80px; height: 80px; object-fit: cover"
+          />
+        </div>
+
+        <div class="flex-grow-1 text-center text-md-start">
+          <div class="fw-bold">{{ item.title }}</div>
+        </div>
+
+        <div class="text-success text-center text-md-end me-md-4">
+          ${{ item.price }}
+        </div>
+
+        <div class="text-center text-md-end">
+          <span class="badge bg-secondary">Stock: {{ item.stock }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p class="text-muted">Your cart is empty.</p>
+  </ng-template>
+</div>
